@@ -18,3 +18,91 @@ body {
   background: whitesmoke;
 }
 
+.ag-products-layout {
+  margin-top: 32px;
+  display: grid;
+  column-gap: 8px; 
+  row-gap: 32px;   
+  grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+}
+
+@media (min-width: 768px) { /* md */
+  .ag-products-layout {
+    grid-template-columns: repeat(4, 1fr); /* md:grid-cols-4 */
+  }
+}
+
+.ag-product-card {
+  width: 100%;          /* w-full */
+  max-width: 152px;     /* max-w-[340px] */
+  margin-left: auto;   /* mx-auto */
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.ag-product-card-inner {
+  display: flex;              /* flex */
+  flex-direction: column;     /* flex-col */
+  justify-content: flex-start;/* justify-start */
+  align-items: center;        /* items-center */
+  padding: 16px;              /* p-4 */
+  border-radius: 16px;        /* rounded-2xl */
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* shadow-[...] */
+}
+
+.ag-product-card-inner {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.ag-product-card:hover .ag-product-card-inner {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+.ag-product-card:active .ag-product-card-inner {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .ag-product-card:active .ag-product-card-inner {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.ag-product-card:focus-visible .ag-product-card-inner {
+  outline: 2px solid #ccc;
+  outline-offset: 4px;
+}
+
+
+.image-product-square {
+  position: relative;   /* relative */
+  width: 100%;          /* w-full */
+  max-width: 128px;     /* max-w-[200px] */
+  aspect-ratio: 1 / 1;  /* aspect-square */
+  overflow: hidden;     /* overflow-hidden */
+}
+
+.image-product-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.ag-product-name {
+  margin-top: 16px;    /* mt-4 */
+  text-align: center; /* text-center */
+  font-size: 16px;    
+  font-weight: 600;   /* font-semibold */
+}
+
+.ag-product-price {
+  margin-top: 8px;    
+  margin-bottom: 4px;
+  text-align: center; /* text-center */
+  font-size: 16px;    
+}
