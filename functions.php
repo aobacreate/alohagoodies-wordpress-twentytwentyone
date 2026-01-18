@@ -44,6 +44,14 @@ add_action( 'wp_enqueue_scripts', function () {
     filemtime( get_stylesheet_directory() . '/assets/css/ag-categories.css' )
   );
 
+  // products（categories の後）
+  wp_enqueue_style(
+    'alohagoodies-products',
+    get_stylesheet_directory_uri() . '/assets/css/ag-products.css',
+    [ 'alohagoodies-categories' ],
+    filemtime( get_stylesheet_directory() . '/assets/css/ag-products.css' )
+  );
+
   //footer (baseの後)
   wp_enqueue_style(
     'alohagoodies-footer',
@@ -107,13 +115,21 @@ function ag_get_apparel_text() {
   ];
 }
 
-function ag_get_section_text( $category = 'home' ) {
+function ag_get_error_text() {
+  return [
+    'title' => ['ページが見つかりません。'],
+    'subtitle' => ['ページは移動したか、存在しないようです。'],
+  ];
+}
+
+function ag_get_section_text($category) {
   $map = [
     'accessories'       => 'ag_get_accessories_text',
     'interior-goods'    => 'ag_get_interior_text',
     'kitchen-tableware' => 'ag_get_kitchen_text',
     'apparel-fabric'    => 'ag_get_apparel_text',
-    'home'              => 'ag_get_home_text'
+    'home'              => 'ag_get_home_text',
+    'error'             => 'ag_get_error_text',
   ];
 
   // カテゴリ指定あり

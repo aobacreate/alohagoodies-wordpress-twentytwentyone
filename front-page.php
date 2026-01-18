@@ -9,7 +9,7 @@ get_header('plain');
 <?php get_template_part( 'template-parts/hero' ); ?>
 
 <?php
-$home_text = ag_get_section_text();
+$home_text = ag_get_section_text('home');
 
 get_template_part(
   'template-parts/tagline',
