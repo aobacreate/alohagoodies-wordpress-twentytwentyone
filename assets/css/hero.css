@@ -1,0 +1,27 @@
+.hero {
+  max-width: 1200px; /* ページ全体幅の制御 */
+  margin: 0 auto;
+  padding-top: 32px;
+}
+
+.hero-inner img {
+  width: 100%;
+  height: auto;     
+  display: block;
+}
+
+.hero-title {
+  font-family:
+    "Helvetica Neue",
+    "Arial Rounded MT Bold",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 32px;    
+}

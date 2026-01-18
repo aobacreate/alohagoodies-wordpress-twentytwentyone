@@ -1,0 +1,18 @@
+/*
+ Theme Name: Aloha Goodies (TT1 Child)
+ Theme URI: https://aobacreate.net/alohagoodies
+ Description: Twenty Twenty-One の子テーマ（Aloha Goodies 用）
+ Author: Aoba Create
+ Template: twentytwentyone
+ Version: 1.0
+ Text Domain: alohagoodies
+*/
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-text-primary: #452c15;
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  background: whitesmoke;
+}
+

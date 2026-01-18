@@ -1,0 +1,114 @@
+.section-title {
+  margin-top: 60px;     /* mt-8  → 8 × 4px */
+  margin-bottom: 20px;  /* mb-5  → 5 × 4px */
+  text-align: center;   /* text-center */
+  font-size: 24px;      /* text-2xl */
+  font-weight: 600;     /* font-semibold */
+}
+
+.ag-container {
+  width: 100%;
+  max-width: 340px;     /* max-w-[340px] */
+  margin-left: auto;   /* mx-auto */
+  margin-right: auto;
+  padding-left: 16px;  /* px-4 */
+  padding-right: 16px;
+  margin-bottom: 64px; /* mb-16 */
+}
+
+@media (min-width: 768px) { /* md */
+  .ag-container {
+    max-width: 720px;   /* md:max-w-[720px] */
+  }
+}
+
+
+.ag-grid-layout {
+  display: grid;
+  column-gap: 12px; /* gap-x-3 = 3 × 4px */
+  row-gap: 32px;    /* gap-y-8 = 8 × 4px */
+}
+
+@media (min-width: 768px) { /* md */
+  .ag-grid-layout {
+    grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+  }
+}
+
+.ag-category-cards {
+  width: 100%;          /* w-full */
+  max-width: 340px;     /* max-w-[340px] */
+  margin-left: auto;   /* mx-auto */
+  margin-right: auto;
+}
+
+.ag-category-card {
+  display: flex;              /* flex */
+  flex-direction: column;     /* flex-col */
+  justify-content: flex-start;/* justify-start */
+  align-items: center;        /* items-center */
+
+  padding: 16px;              /* p-4 */
+  border-radius: 16px;        /* rounded-2xl */
+
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* shadow-[...] */
+}
+
+.ag-category-card:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.image-square {
+  position: relative;   /* relative */
+  width: 100%;          /* w-full */
+  max-width: 200px;     /* max-w-[200px] */
+  aspect-ratio: 1 / 1;  /* aspect-square */
+  overflow: hidden;     /* overflow-hidden */
+}
+
+.object-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ag-card-title {
+  margin-top: 16px;    /* mt-4 */
+  text-align: center; /* text-center */
+  font-size: 20px;    /* text-xl */
+  font-weight: 600;   /* font-semibold */
+}
+
+.ag-card-desc {
+  margin-top: 8px;     /* mt-2 */
+  margin-bottom: 16px;/* mb-4 */
+  text-align: center; /* text-center */
+  font-size: 16px;    /* text-base */
+}
+
+.ag-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 32px;
+  color: #fff;
+  background: var(--color-text-primary);
+  border-radius: 16px;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;      /* ← これで下線を消す */
+
+  cursor: pointer;
+}
+
+/* 念のため hover / visited でも下線を消す */
+.ag-button:hover,
+.ag-button:visited,
+.ag-button:focus {
+  text-decoration: none;
+}
