@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', function () {
     filemtime( get_stylesheet_directory() . '/assets/css/tagline.css' )
   );
 
-  // categories（base の後でOK）
+  // categories（base の後）
   wp_enqueue_style(
     'alohagoodies-categories',
     get_stylesheet_directory_uri() . '/assets/css/ag-categories.css',
@@ -44,6 +44,13 @@ add_action( 'wp_enqueue_scripts', function () {
     filemtime( get_stylesheet_directory() . '/assets/css/ag-categories.css' )
   );
 
+  //footer (baseの後)
+  wp_enqueue_style(
+    'alohagoodies-footer',
+    get_stylesheet_directory_uri() . '/assets/css/ag-footer.css',
+    [ 'alohagoodies-style' ],
+    filemtime( get_stylesheet_directory() . '/assets/css/ag-footer.css' )
+  );
 }, 20 );
 
 function ag_get_home_text() {
@@ -55,6 +62,33 @@ function ag_get_home_text() {
     'subtitle' => [
       '毎日の暮らしに、',
       '少しだけ南国のやさしさを。',
+    ],
+  ];
+}
+
+function ag_get_footer_text() {
+  return [
+    [
+      'title' => 'Location',
+      'lines' => [
+        '123 Example Street',
+        'Waikiki, Honolulu',
+        '12345',
+      ],
+    ],
+    [
+      'title' => 'Hours',
+      'lines' => [
+        'Monday–Friday',
+        '8am–6pm',
+      ],
+    ],
+    [
+      'title' => 'Contact',
+      'lines' => [
+        'hi@example.com',
+        '(123)456-7890',
+      ],
     ],
   ];
 }

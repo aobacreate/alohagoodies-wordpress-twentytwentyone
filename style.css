@@ -11,6 +11,8 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --color-text-primary: #452c15;
+  --ag-brown: #4b2e14; /* VIEWボタン */
+  --ag-brown-dark: #3b2310; /* footer用 */
   color: var(--color-text-primary);
   line-height: 1.7;
   background: whitesmoke;
