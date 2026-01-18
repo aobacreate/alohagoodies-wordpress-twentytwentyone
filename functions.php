@@ -53,6 +53,19 @@ add_action( 'wp_enqueue_scripts', function () {
   );
 }, 20 );
 
+add_action( 'wp_enqueue_scripts', function () {
+
+  if ( is_page( ['accessories', 'interior-goods', 'kitchen-tableware','apparel-fabric'] ) ) {
+    wp_enqueue_script(
+      'ag-product-overlay',
+      get_stylesheet_directory_uri() . '/assets/js/product-overlay.js',
+      ['jquery'],
+      '1.0',
+      true
+    );
+  }
+});
+
 function ag_get_home_text() {
   return [
     'title' => [
