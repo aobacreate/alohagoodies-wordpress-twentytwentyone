@@ -5,7 +5,11 @@ A custom WordPress theme for **Aloha Goodies**, a Hawaiian-inspired lifestyle go
 This project is a WordPress adaptation of my original Next.js design, rebuilt using PHP and the WordPress theme system without page builders.
 
 ---
+## 🔗 Demo
 
+[Live demo](https://aobacreate.net/alohagoodies/)
+
+---
 ## 🌺 Concept
 
 Aloha Goodies is a fictional brand that brings the warmth of island life into everyday living through accessories, interior goods, and kitchenware.
