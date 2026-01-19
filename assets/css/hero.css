@@ -1,11 +1,10 @@
 .hero {
   max-width: 1200px; /* ページ全体幅の制御 */
   margin: 0 auto;
-  padding-top: 32px;
 }
 
 .hero-inner {
-  height: 200px; /* desktop */
+  height: 260px; /* desktop */
 }
 
 .hero-inner img {
@@ -13,18 +12,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-@media (max-width: 1024px) {
-  .hero-inner {
-    height: 260px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-inner {
-    height: 320px;
-  }
 }
 
 .hero-title {
@@ -40,7 +27,17 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 0 32px;    
+  padding: 20px;  
+  color: #fff;
+  background: var(--ag-brown-dark);
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24px; 
+    letter-spacing: 0.12em; 
+    padding: 8px 12px; 
+  }
 }
 
 .hero-title a {
